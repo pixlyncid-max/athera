@@ -416,31 +416,6 @@ export default function ServicesPage({ services = [], settings = {} }) {
           </div>
         </div>
       </section>
-
-      {/* CTA Card Section */}
-      <section className="py-24 lg:py-32 relative">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12">
-          <div className="relative bg-gradient-to-b from-nexus-elevated to-nexus-surface border border-nexus-accent/30 rounded-3xl p-10 sm:p-16 text-center overflow-hidden shadow-2xl">
-            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-nexus-accent to-transparent glow-accent" />
-            <div className="max-w-2xl mx-auto relative z-10">
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight mb-6">
-                {settings?.services_cta_title || "Butuh strategi khusus untuk organisasi Anda?"}
-              </h2>
-              <p className="text-nexus-muted text-base sm:text-lg mb-8 leading-relaxed">
-                {settings?.services_cta_desc ||
-                  "Jadwalkan sesi konsultasi awal tanpa komitmen dengan Partner Senior kami untuk membedah tantangan human capital Anda."}
-              </p>
-              <Link
-                href="/kontak"
-                className="inline-flex items-center gap-2 bg-nexus-accent text-nexus-base font-semibold px-8 py-4 rounded-full hover:bg-nexus-accentHover hover:scale-[1.02] active:scale-[0.98] transition-[background-color,transform] duration-300 shadow-xl cursor-pointer text-base"
-              >
-                {settings?.services_cta_button || "Mulai Sesi Konsultasi"}
-                <ArrowUpRight size={20} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </PublicLayout>
   );
 }

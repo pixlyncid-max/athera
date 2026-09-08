@@ -397,30 +397,6 @@ export default function TrustPage({ stats = [], clients = [], caseStudies = [], 
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-24 lg:py-32 relative">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12">
-          <div className="relative bg-gradient-to-b from-nexus-elevated to-nexus-surface border border-nexus-accent/30 rounded-3xl p-10 sm:p-16 text-center overflow-hidden shadow-2xl">
-            <div className="max-w-2xl mx-auto relative z-10">
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-6">
-                {settings?.about_cta_title || "Bergabunglah bersama ratusan organisasi yang telah bertransformasi."}
-              </h2>
-              <p className="text-nexus-muted text-base mb-8 leading-relaxed">
-                {settings?.about_cta_desc ||
-                  "Diskusikan target pengembangan human capital perusahaan Anda secara rahasia bersama konsultan kami."}
-              </p>
-              <Link
-                href="/kontak"
-                className="inline-flex items-center gap-2 bg-nexus-accent text-nexus-base font-semibold px-8 py-4 rounded-full hover:bg-nexus-accentHover hover:scale-[1.02] active:scale-[0.98] transition-[background-color,transform] duration-300 shadow-xl cursor-pointer text-base"
-              >
-                {settings?.about_cta_button || "Jadwalkan Diskusi Awal"}
-                <ArrowUpRight size={20} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </PublicLayout>
   );
 }
