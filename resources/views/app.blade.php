@@ -7,9 +7,9 @@
         <title inertia>{{ config('app.name', 'Athera Nexus — Human Capital Consulting') }}</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="{{ asset('images/ICON ATHERA@300x.png') }}">
-        <link rel="shortcut icon" href="{{ asset('images/ICON ATHERA@300x.png') }}">
-        <link rel="apple-touch-icon" href="{{ asset('images/ICON ATHERA@300x.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v=2">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}?v=2">
+        <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v=2">
 
         <!-- Preconnect Fonts -->
         <link rel="preconnect" href="https://api.fontshare.com">
