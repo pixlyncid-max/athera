@@ -1,0 +1,92 @@
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 204 26% 5%;
+        --foreground: 0 0% 100%;
+        --card: 200 22% 10%;
+        --card-foreground: 0 0% 100%;
+        --popover: 200 22% 10%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 192 47% 48%;
+        --primary-foreground: 204 26% 5%;
+        --secondary: 200 22% 10%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 200 22% 10%;
+        --muted-foreground: 203 10% 66%;
+        --accent: 192 47% 48%;
+        --accent-foreground: 204 26% 5%;
+        --destructive: 0 62.8% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 100% / 0.05;
+        --input: 0 0% 100% / 0.08;
+        --ring: 192 47% 48%;
+        --radius: 0.5rem;
+    }
+
+    * {
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    html {
+        scroll-behavior: auto;
+        background-color: #0B0F12;
+    }
+
+    body {
+        background-color: #0B0F12;
+        color: #ffffff;
+        font-family: 'Outfit', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+
+    ::selection {
+        background: rgba(65, 160, 180, 0.35);
+        color: #ffffff;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #0B0F12;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #1A232A;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #41A0B4;
+    }
+}
+
+@layer utilities {
+    .text-outline {
+        -webkit-text-stroke: 1px rgba(65, 160, 180, 0.4);
+        color: transparent;
+    }
+
+    .glow-accent {
+        filter: drop-shadow(0 0 8px rgba(65, 160, 180, 0.5));
+    }
+
+    .noise-overlay::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        pointer-events: none;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+}
